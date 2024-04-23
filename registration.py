@@ -154,7 +154,6 @@ def Search():
 #################################
 
 def update():
-    name = StringVar()
     r1 = registration.get()
     n1 = name.get()
     c1 = Class.get()
@@ -174,9 +173,9 @@ def update():
 
     for row in sheet.rows:
         if row[0].value == r1:
-            name = row[0]
-            reg_no_position = str(name)[14:-1]
-            reg_numbers = str(name)[15:-1]
+            name1 = row[0]
+            reg_no_position = str(name1)[14:-1]
+            reg_numbers = str(name1)[15:-1]
 
     # sheet.cell(column=1, row=int(reg_numbers), value=r1)
     sheet.cell(column=2, row=int(reg_numbers), value=n1)
